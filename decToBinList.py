@@ -1,5 +1,6 @@
 import RPi.GPIO as GPIO
 import time
+import numpy as np
 
 GPIO.setmode(GPIO.BCM)
 leds = [26, 19, 13, 6, 5, 11, 9, 10]
