@@ -31,7 +31,37 @@ def lightNumber (number):
 
     time.sleep(3)
 
-lightNumber(7)
+def PutOutNumber (number):   
+    n = decToBinList(number)
+
+    i = 0 
+    for i in range(7): 
+        GPIO.output(leds[i], n[i])
+
+    time.sleep(3)
+    
+def RunningPattern (number, direct)
+    
+    k = 1
+    
+    wile k = 1:
+        n = decToBinList(number)
+        
+        i = 0 
+        for i in range(7): 
+            GPIO.output(leds[i], n[i])
+    
+        time.sleep(3)
+        
+        for i in range(7): 
+            GPIO.output(leds[i], 0)
+        
+        time.sleep(3)
+    
+        n = np.roll(n, direct)
+    
+    
+RunningPattern(7, 1)
 
 GPIO.cleanup()
 
